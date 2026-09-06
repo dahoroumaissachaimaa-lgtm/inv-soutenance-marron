@@ -1,0 +1,30 @@
+/* Responsive tweaks */
+
+@media (max-width: 900px) {
+  .corner-top-left { width: 240px; top: -20px; left: -30px; }
+  .corner-bottom-right { width: 260px; bottom: -30px; right: -40px; }
+  .hero { padding: 6vh 5vw 8vh; }
+}
+
+@media (max-width: 640px) {
+  .corner-top-left { width: 170px; top: -10px; left: -20px; }
+  .corner-bottom-right { width: 190px; bottom: -20px; right: -30px; }
+
+  .countdown {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cd-unit { padding: 1.2rem 0.4rem; }
+
+  .music-toggle .music-label { display: none; }
+  .music-toggle { padding: 0.9rem; border-radius: 50%; }
+
+  .btn { padding: 0.8rem 1.2rem; font-size: 0.72rem; }
+  .btn-whatsapp { padding: 1rem 1.6rem; }
+}
+
+@media (max-width: 420px) {
+  .name-main { font-size: 1.3rem; }
+  .frame-content { inset: 16% 13%; }
+  .grad-cap { width: 52%; top: -12%; right: -8%; }
+  .frame-diploma { width: 48px; height: 48px; font-size: 1.1rem; }
+}

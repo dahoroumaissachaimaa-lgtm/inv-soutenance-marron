@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitation — Soutenance de Master · </title>
+  <meta name="description" content="Invitation à la soutenance de mémoire de Master en Systèmes d'Information Distribués — USTO-MB Oran, 06 Juin 2027." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cinzel:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Local styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="animation.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+
+  <!-- Loader / Intro fade -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <p class="loader-text">Bismillah…</p>
+    </div>
+  </div>
+
+  <!-- Envelope Intro Animation -->
+  <div id="intro" aria-hidden="false">
+    <div class="intro-bg"></div>
+
+    <div class="envelope-stage">
+      <div class="envelope" id="envelope">
+        <!-- back layer -->
+        <div class="env-back"></div>
+
+        <!-- card inside envelope -->
+        <div class="env-card" id="envCard">
+          <div class="env-card-inner">
+            <p class="env-card-eyebrow">— Invitation —</p>
+            <p class="env-card-bismillah" dir="rtl"> بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+            <div class="env-card-monogram">
+              <span>S</span><i class="fa-solid fa-fan"></i><span>K</span>
+            </div>
+            <p class="env-card-name">Sofia Kenza<br /><em> BENSALEM</em></p>
+            <p class="env-card-line">Soutenance de Master</p>
+            <p class="env-card-date">06 · 06 · 2027</p>
+          </div>
+        </div>
+
+        <!-- front pocket -->
+        <div class="env-front"></div>
+        <!-- wax seal -->
+        <div class="env-seal">
+          <span>SK</span>
+        </div>
+        <!-- top flap (opens) -->
+        <div class="env-flap" id="envFlap"></div>
+      </div>
+
+      <button id="openBtn" class="open-btn" aria-label="Ouvrir l'invitation">
+        <span class="open-btn-inner">
+          <i class="fa-regular fa-envelope-open"></i>
+          Ouvrir l'invitation
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Falling petals canvas overlay -->
+  <div id="petals-container" aria-hidden="true"></div>
+
+  <!-- Golden particles overlay -->
+  <div id="particles" aria-hidden="true"></div>
+
+  <!-- Music toggle -->
+  <button id="music-toggle" class="music-toggle" aria-label="Activer la musique">
+    <i class="fa-solid fa-play"></i>
+    <span class="music-label">Activer la musique</span>
+  </button>
+  <audio id="bg-music" src="piano.mp3" loop preload="auto"></audio>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="corner-flower corner-top-left" data-aos="fade-down-right" data-aos-duration="2000">
+      <img src="bouquet-top.png" alt="" />
+    </div>
+    <div class="corner-flower corner-bottom-right" data-aos="fade-up-left" data-aos-duration="2000">
+      <img src="bouquet-bottom.png" alt="" />
+    </div>
+
+    <div class="hero-inner">
+      <p class="bismillah" data-aos="fade-down" data-aos-duration="1600">
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+      </p>
+
+      <div class="hero-divider" data-aos="fade" data-aos-delay="400"></div>
+
+      <p class="eyebrow" data-aos="fade-up" data-aos-delay="600">Vous êtes cordialement invités</p>
+
+      <div class="frame-wrap" data-aos="zoom-in" data-aos-duration="1800" data-aos-delay="800">
+        <img class="gold-frame" src="frame-gold.png" alt="" aria-hidden="true" />
+
+        <!-- Diplôme / rouleau sous le cadre -->
+        <div class="frame-diploma" aria-hidden="true">
+          <i class="fa-solid fa-scroll"></i>
+        </div>
+
+        <!-- Chapeau de soutenance posé sur le cadre -->
+        <img class="grad-cap" src="graduation-cap.png" alt="" aria-hidden="true"
+             data-aos="fade-down" data-aos-duration="1400" data-aos-delay="1600" />
+
+        <div class="frame-content">
+          <p class="frame-tag">
+            <i class="fa-solid fa-graduation-cap"></i> Master 2 <i class="fa-solid fa-graduation-cap"></i>
+          </p>
+          <h1 class="name">
+            <span class="name-title">Mme</span><br />
+            <span class="name-main">Sofia Kenza</span><br />
+            <span class="name-surname">BENSALEM</span>
+          </h1>
+          <div class="frame-line"><span></span><i class="fa-solid fa-book-open-reader"></i><span></span></div>
+          <p class="frame-subtitle">Présentation du projet de fin d'études</p>
+          <p class="frame-specialty">Cybersécurité</p>
+          <p class="frame-specialty"></p>
+        </div>
+      </div>
+
+      <p class="scroll-hint" data-aos="fade-up" data-aos-delay="1400">
+        <i class="fa-solid fa-angle-down"></i>
+      </p>
+    </div>
+  </section>
+
+  <!-- INVITATION MESSAGE -->
+  <section class="message-section">
+    <div class="container">
+      <div class="message-card glass" data-aos="fade-up">
+        <p class="message-fr">
+          C'est avec un immense plaisir que nous vous invitons à assister à la soutenance de notre mémoire de Master.
+          Votre présence sera pour nous un honneur et un précieux soutien pour couronner ces années d'études.
+        </p>
+        <div class="ornament">
+          <span></span><i class="fa-solid fa-fan"></i><span></span>
+        </div>
+        <p class="message-ar" dir="rtl">
+          يشرفنا ويسعدنا حضوركم لمناقشة مذكرة الماستر الخاصة بنا،
+          فحضوركم يمنحنا الفرح والدعم في هذه اللحظة الخاصة.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown-section" data-aos="fade-up">
+    <div class="container">
+      <p class="section-eyebrow">— La soutenance commence dans —</p>
+      <div id="countdown" class="countdown">
+        <div class="cd-unit glass"><span class="cd-num" id="cd-days">--</span><span class="cd-lbl">jours</span></div>
+        <div class="cd-unit glass"><span class="cd-num" id="cd-hours">--</span><span class="cd-lbl">heures</span></div>
+        <div class="cd-unit glass"><span class="cd-num" id="cd-mins">--</span><span class="cd-lbl">minutes</span></div>
+        <div class="cd-unit glass"><span class="cd-num" id="cd-secs">--</span><span class="cd-lbl">secondes</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILS -->
+  <section class="details-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Détails de la soutenance</h2>
+      <div class="details-grid">
+        <div class="detail-card glass" data-aos="fade-up" data-aos-delay="100">
+          <div class="detail-icon"><i class="fa-solid fa-calendar-days"></i></div>
+          <h3>Date</h3>
+          <p>06 Juin 2027</p>
+        </div>
+        <div class="detail-card glass" data-aos="fade-up" data-aos-delay="200">
+          <div class="detail-icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>Heure</h3>
+          <p>10:00</p>
+        </div>
+        <div class="detail-card glass" data-aos="fade-up" data-aos-delay="300">
+          <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h3>Lieu</h3>
+          <p>USTO-MB, Oran<br /><small>Département Informatique — Salle de conférance</small></p>
+        </div>
+        <div class="detail-card glass" data-aos="fade-up" data-aos-delay="400">
+          <div class="detail-icon"><i class="fa-solid fa-user-graduate"></i></div>
+          <h3>Niveau</h3>
+          <p>Master 2<br /><small>Cybersécurité</small></p>
+        </div>
+      </div>
+
+      <div class="cta-row" data-aos="fade-up" data-aos-delay="500">
+        <a class="btn btn-outline"
+           href="https://www.google.com/maps/search/?api=1&query=USTO-MB+D%C3%A9partement+Informatique+Oran"
+           target="_blank" rel="noopener">
+          <i class="fa-solid fa-map-location-dot"></i> Voir la localisation
+        </a>
+        <a class="btn btn-outline" id="btn-cal" href="#">
+          <i class="fa-solid fa-calendar-plus"></i> Ajouter à mon calendrier
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHATSAPP CTA -->
+  <section class="rsvp-section">
+    <div class="container">
+      <div class="rsvp-card glass" data-aos="zoom-in">
+        <h2>Confirmer votre présence</h2>
+        <p>Un simple message suffit — cela nous ferait infiniment plaisir.</p>
+        <a class="btn btn-whatsapp"
+           href="https://wa.me/213774075155?text=Bonjour%2C%20je%20confirme%20ma%20pr%C3%A9sence%20%C3%A0%20votre%20soutenance%20de%20Master%20le%2006%20Juin%202027."
+           target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> Confirmer ma présence
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Galerie</h2>
+      <div class="gallery">
+        <div class="gallery-item glass" data-aos="fade-up" data-aos-delay="100">
+          <img src="usto-ambiance.jpg" alt="Ambiance USTO" />
+          <span class="gallery-caption">USTO-MB · Département Informatique</span>
+        </div>
+        <div class="gallery-item glass" data-aos="fade-up" data-aos-delay="200">
+          <img src="2004-2027.png" alt="Fleurs" />
+          <span class="gallery-caption">Un instant, une émotion</span>
+        </div>
+        <div class="gallery-item glass" data-aos="fade-up" data-aos-delay="300">
+          <img src="livre.jpg" alt="Fleurs" />
+          <span class="gallery-caption">Master 2 · Cybersécurité</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner" data-aos="fade-up">
+        <p class="footer-fr">
+          Au plaisir de vous accueillir.<br />
+          Nous serions honorés de votre présence.<br />
+          En espérant partager ce moment important avec vous.
+        </p>
+        <div class="ornament light">
+          <span></span><i class="fa-solid fa-fan"></i><span></span>
+        </div>
+        <p class="footer-ar" dir="rtl">
+          حضوركم يشرفنا ويسعدنا<br />
+          مع خالص التقدير والاحترام
+        </p>
+        <p class="signature">— BENSALEM Sofia Kenza  —</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="main.js"></script>
+  <script src="countdown.js"></script>
+  <script src="music.js"></script>
+  <script src="whatsapp.js"></script>
+  <script src="aos.js"></script>
+  <script src="intro.js"></script>
+</body>
+</html>
